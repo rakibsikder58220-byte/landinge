@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- ========== Anti-Cache Meta Tags (ক্যাশ ক্লিয়ারিংয়ের জন্য) ========== -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NexCore - প্রিমিয়াম লার্নিং ও ক্যারিয়ার কমিউনিটি।">
+    <title>NexCore | Premium Community</title>
+    
+    <!-- Google Fonts: Hind Siliguri & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Customization -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        bengali: ['"Hind Siliguri"', 'sans-serif'],
+                        english: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563EB',
+                        dark: '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Floating Animation for Down Arrow */
+        @keyframes float-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .animate-float {
+            animation: float-down 2s ease-in-out infinite;
+        }
+
+        /* Active Gradient border around Logo */
+        @keyframes rotate-gradient {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .active-avatar-ring::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563EB, #06B6D4, #10B981, #2563EB);
+            z-index: -1;
+            animation: rotate-gradient 4s linear infinite;
+        }
+
+        /* ── SPA Views (Single Page Application Behavior) ── */
+        .spa-view {
+            display: none;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .spa-view.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #main-content {
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+        #main-content.hidden {
+            display: none;
+            opacity: 0;
+            transform: translateY(16px);
+        }
+    </style>
+
+    <!-- TikTok Pixel Code Start -->
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+    
+      ttq.load('D9BFDKRC77U102660TKG');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
+</head>
+<body class="font-bengali bg-slate-50 text-slate-800 antialiased selection:bg-primary selection:text-white">
+
+    <div id="app">
+        <!-- ============================================================
+        MAIN CONTENT WRAPPER
+        ============================================================ -->
+        <div id="main-content">
+            
+            <!-- ========== HERO SECTION ========== -->
+            <header class="pt-10 pb-10 px-4 max-w-3xl mx-auto text-center relative overflow-hidden">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-400/10 rounded-full blur-[80px] -z-10 pointer-events-none"></div>
+
+                <div class="inline-flex items-center justify-center gap-2 bg-white/80 text-slate-700 px-5 py-1.5 rounded-full text-sm font-semibold mb-5 border border-slate-200 shadow-sm backdrop-blur-sm">
+                    <span class="text-blue-600">✦</span> প্রিমিয়াম লার্নিং ও ক্যারিয়ার কমিউনিটি
+                </div>
+
+                <div class="my-5 flex justify-center">
+                    <div class="relative w-28 h-28 rounded-full flex items-center justify-center shadow-lg active-avatar-ring bg-white">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3256/3256722.png" alt="NexCore Logo" class="w-20 h-20 object-contain relative z-10">
+                    </div>
+                </div>
+
+                <div class="mt-6 mb-3">
+                    <h2 class="text-[19px] md:text-xl font-bold text-slate-700 drop-shadow-sm leading-snug max-w-xs mx-auto">
+                        সঠিক গাইডলাইন পেতে<br>জয়েন করুন আমাদের সাথে
+                    </h2>
+                    <div class="mt-3 flex justify-center text-blue-500 text-xl animate-float">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                </div>
+
+                <div class="mt-5 max-w-sm mx-auto">
+                    <!-- Button href is a dummy anchor (#join). Magic happens in JS. -->
+                    <a href="#join" onclick="handleJoinEvent(event)" class="flex items-center justify-center gap-2 bg-primary hover:bg-blue-700 text-white w-full py-3.5 px-4 rounded-full font-bold text-[17px] whitespace-nowrap transition-all transform hover:scale-[1.02] active:scale-95 border border-blue-500 shadow-md">
+                        <span>🚀 ফ্রিতে কমিউনিটিতে যোগ দিন</span>
+                        <i class="fas fa-chevron-right text-sm opacity-90 mt-0.5"></i>
+                    </a>
+                    
+                    <div class="mt-4 flex items-center justify-center gap-3">
+                        <div class="flex -space-x-2.5">
+                            <img class="w-7 h-7 rounded-full border-2 border-slate-50 object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="User">
+                            <img class="w-7 h-7 rounded-full border-2 border-slate-50 object-cover" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&h=100&fit=crop" alt="User">
+                            <img class="w-7 h-7 rounded-full border-2 border-slate-50 object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="User">
+                        </div>
+                        <p class="text-slate-500 text-[13px] font-medium">টেলিগ্রামে <span class="font-bold text-slate-700 font-english">15,000+</span> মেম্বার যুক্ত আছেন</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ========== TESTIMONIALS SECTION ========== -->
+            <section class="py-12 px-4 bg-slate-50 border-t border-slate-200/60">
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-8">
+                        <span class="text-[11px] font-bold text-blue-600 bg-blue-100/50 px-3 py-1 rounded-full uppercase tracking-wider">কমিউনিটি</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">সদস্যদের মতামত</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="relative bg-white p-6 rounded-3xl border border-slate-100 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] transition-all duration-300 hover:translate-y-[-5px] hover:shadow-[0_25px_50px_-15px_rgba(37,99,235,0.12)] flex flex-col justify-between overflow-hidden">
+                            <i class="fas fa-quote-right absolute -top-4 -right-2 text-slate-50 text-7xl z-0"></i>
+                            <div class="relative z-10">
+                                <div class="flex text-yellow-400 text-xs mb-4 gap-0.5">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="text-slate-800 text-[15px] leading-relaxed mb-5 font-medium">"NexCore এর টেলিগ্রাম কমিউনিটিতে যুক্ত হয়ে আমি রেগুলার গাইডলাইন এবং প্রবলেম সলভিং সাপোর্ট পেয়েছি, যা আমাকে ক্যারিয়ারে অনেক সাহায্য করেছে।"</p>
+                            </div>
+                            <div class="flex items-center gap-3 pt-4 border-t border-slate-100 relative z-10">
+                                <img class="w-10 h-10 rounded-full object-cover border-2 border-slate-50" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="তানভীর">
+                                <div class="flex items-center h-full">
+                                    <h4 class="text-sm font-bold text-slate-900">তানভীর আহমেদ</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative bg-white p-6 rounded-3xl border border-slate-100 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] transition-all duration-300 hover:translate-y-[-5px] hover:shadow-[0_25px_50px_-15px_rgba(37,99,235,0.12)] flex flex-col justify-between overflow-hidden">
+                            <i class="fas fa-quote-right absolute -top-4 -right-2 text-slate-50 text-7xl z-0"></i>
+                            <div class="relative z-10">
+                                <div class="flex text-yellow-400 text-xs mb-4 gap-0.5">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="text-slate-800 text-[15px] leading-relaxed mb-5 font-medium">"টেলিগ্রাম গ্রুপে ডিজাইন শেখার চমৎকার সব কোয়ালিটি রিসোর্স এবং সিনিয়ারদের ইনস্ট্যান্ট সাপোর্ট পেয়েছি। যেকোনো সমস্যায় গ্রুপ থেকে দ্রুত সমাধান পাওয়া যায়।"</p>
+                            </div>
+                            <div class="flex items-center gap-3 pt-4 border-t border-slate-100 relative z-10">
+                                <img class="w-10 h-10 rounded-full object-cover border-2 border-slate-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="সাদিয়া">
+                                <div class="flex items-center h-full">
+                                    <h4 class="text-sm font-bold text-slate-900">সাদিয়া রহমান</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative bg-white p-6 rounded-3xl border border-slate-100 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)] transition-all duration-300 hover:translate-y-[-5px] hover:shadow-[0_25px_50px_-15px_rgba(37,99,235,0.12)] flex flex-col justify-between overflow-hidden">
+                            <i class="fas fa-quote-right absolute -top-4 -right-2 text-slate-50 text-7xl z-0"></i>
+                            <div class="relative z-10">
+                                <div class="flex text-yellow-400 text-xs mb-4 gap-0.5">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="text-slate-800 text-[15px] leading-relaxed mb-5 font-medium">"ফ্রিল্যান্সিং ক্যারিয়ারে যখনই আটকে গিয়েছি, এই কমিউনিটির মেম্বারদের রিয়েল-টাইম সাপোর্ট পেয়েছি। এটি একটি সত্যিকারের প্রফেশনাল নেটওয়ার্ক।"</p>
+                            </div>
+                            <div class="flex items-center gap-3 pt-4 border-t border-slate-100 relative z-10">
+                                <img class="w-10 h-10 rounded-full object-cover border-2 border-slate-50" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="মাহমুদুল">
+                                <div class="flex items-center h-full">
+                                    <h4 class="text-sm font-bold text-slate-900">মাহমুদুল হাসান</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== FOOTER ========== -->
+            <footer class="bg-white border-t border-slate-200/60 py-8 px-4">
+                <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5">
+                    <div class="flex flex-col items-center md:items-start gap-1">
+                        <div class="flex items-center gap-2">
+                            <span class="font-extrabold text-slate-900 text-lg font-english">NexCore</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400 mt-0.5">&copy; ২০২৬ NexCore. সর্বস্বত্ব সংরক্ষিত।</p>
+                    </div>
+                    <div class="flex gap-5 text-[11px] text-slate-500 font-bold uppercase tracking-wider">
+                        <a href="#" onclick="showView('privacyView'); return false;" class="hover:text-primary transition cursor-pointer">গোপনীয়তা নীতি</a>
+                        <a href="#" onclick="showView('termsView'); return false;" class="hover:text-primary transition cursor-pointer">শর্তাবলী</a>
+                    </div>
+                    <div class="flex gap-4 text-slate-400">
+                        <a href="#" class="hover:text-primary transition text-base"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="hover:text-primary transition text-base"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="hover:text-primary transition text-base"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </div> <!-- End main-content -->
+
+        <!-- ============================================================
+        SPA VIEWS: Privacy Policy & Terms & Conditions (AD COMPLIANT)
+        ============================================================ -->
+
+        <!-- ─── PRIVACY POLICY VIEW ─── -->
+        <div id="privacyView" class="spa-view max-w-3xl mx-auto py-12 px-4">
+            <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-slate-200/60">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 border-b border-slate-100 pb-6">
+                    <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-lg">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        গোপনীয়তা নীতি (Privacy Policy)
+                    </h2>
+                    <button onclick="showMain()" class="text-sm font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-full transition flex items-center gap-2 w-fit">
+                        <i class="fas fa-arrow-left"></i> ফিরে যান
+                    </button>
+                </div>
+                
+                <div class="space-y-6 text-[15px] text-slate-600 leading-relaxed">
+                    <p><strong>সর্বশেষ আপডেট:</strong> ১৫ জুলাই, ২০২৬</p>
+                    <p><strong>NexCore</strong> (এরপরে "আমরা" বা "আমাদের" হিসেবে উল্লেখিত) আপনার গোপনীয়তা রক্ষায় প্রতিশ্রুতিবদ্ধ। এই গোপনীয়তা নীতি বর্ণনা করে আমরা কীভাবে আপনার তথ্য সংগ্রহ ও সুরক্ষিত করি।</p>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">১. আমরা কী তথ্য সংগ্রহ করি</h3>
+                        <p>আমাদের টেলিগ্রাম কমিউনিটিতে যুক্ত হবার জন্য আমরা আপনার কাছ থেকে কোনো সংবেদনশীল ব্যক্তিগত তথ্য (যেমন: ক্রেডিট কার্ড, ব্যাংক ডিটেইলস বা জাতীয় পরিচয়পত্র) সংগ্রহ করি না। শুধুমাত্র আপনার পাবলিক টেলিগ্রাম প্রোফাইল ইনফরমেশন ব্যবহৃত হয়।</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">২. তথ্যের ব্যবহার ও শেয়ারিং</h3>
+                        <p>আপনার প্রদত্ত তথ্য শুধুমাত্র কমিউনিটি পরিচালনা এবং আপনাকে প্রাসঙ্গিক আপডেট পাঠাতে ব্যবহৃত হয়। আমরা কোনো থার্ড-পার্টি বা বাইরের কোম্পানির কাছে আপনার ডেটা বিক্রি, ভাড়া বা শেয়ার করি না।</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">৩. কুকিজ এবং ট্র্যাকিং (Cookies & Tracking)</h3>
+                        <p>আমাদের বিজ্ঞাপনের কার্যকারিতা পরিমাপ করতে এবং ইউজার এক্সপেরিয়েন্স উন্নত করতে আমরা মেটা পিক্সেল (Meta Pixel), গুগল অ্যানালিটিক্স বা সমজাতীয় স্ট্যান্ডার্ড ট্র্যাকিং প্রযুক্তি ব্যবহার করতে পারি। এটি সম্পূর্ণ ব্রাউজার-ভিত্তিক এবং এতে আপনার কোনো ব্যক্তিগত পরিচয় প্রকাশ পায় না।</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">৪. ডেটা নিরাপত্তা</h3>
+                        <p>টেলিগ্রামের নিজস্ব সিকিউরিটি ও এন্ড-টু-এন্ড এনক্রিপশনের মাধ্যমে আপনার সকল চ্যাট সম্পূর্ণ নিরাপদ থাকে। আমাদের নিজস্ব কোনো প্রাইভেট সার্ভারে আপনার চ্যাট হিস্ট্রি সংরক্ষণ করা হয় না।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── TERMS & CONDITIONS VIEW ─── -->
+        <div id="termsView" class="spa-view max-w-3xl mx-auto py-12 px-4">
+            <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-slate-200/60">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 border-b border-slate-100 pb-6">
+                    <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-lg">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        শর্তাবলী (Terms & Conditions)
+                    </h2>
+                    <button onclick="showMain()" class="text-sm font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-full transition flex items-center gap-2 w-fit">
+                        <i class="fas fa-arrow-left"></i> ফিরে যান
+                    </button>
+                </div>
+
+                <div class="space-y-6 text-[15px] text-slate-600 leading-relaxed">
+                    <p><strong>NexCore</strong> কমিউনিটিতে স্বাগতম। আমাদের প্ল্যাটফর্ম ব্যবহার করার মাধ্যমে আপনি নিচের শর্তাবলীতে সম্মত হচ্ছেন:</p>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">১. বয়সের সীমাবদ্ধতা</h3>
+                        <p>এই কমিউনিটিতে যুক্ত হতে এবং এর রিসোর্স ব্যবহার করতে আপনার বয়স অবশ্যই ন্যূনতম ১৮ বছর হতে হবে।</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">২. ব্যবহারকারীর আচরণ ও স্প্যাম পলিসি</h3>
+                        <p>সদস্যরা একে অপরের সাথে প্রফেশনাল ও সম্মানজনক আচরণ করবেন। অ্যাডমিনের পূর্বানুমতি ছাড়া কোনো প্রকার প্রমোশনাল লিংক, অ্যাফিলিয়েট লিংক, ক্রিপ্টোকারেন্সি অফার বা স্প্যাম মেসেজ শেয়ার করা সম্পূর্ণ নিষিদ্ধ। এই নিয়ম ভঙ্গ করলে বিনা নোটিশে কমিউনিটি থেকে ব্যান করা হবে।</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">৩. উপার্জনের দাবিত্যাগ (Earnings & Job Disclaimer)</h3>
+                        <p>NexCore একটি শিক্ষামূলক ও নেটওয়ার্কিং প্ল্যাটফর্ম। আমরা এখানে কোনো প্রকার "নিশ্চিত চাকরি", "রাতারাতি বড়লোক হওয়ার উপায়" বা "গ্যারান্টিযুক্ত ইনকামের" প্রতিশ্রুতি প্রদান করিবিধা করি না। আপনার ক্যারিয়ার বা ব্যবসার সফলতা সম্পূর্ণ আপনার নিজস্ব স্কিল, পরিশ্রম এবং চেষ্টার ওপর নির্ভর করে। কমিউনিটির কোনো কন্টেন্টকে পেশাদার আইনি বা আর্থিক পরামর্শ হিসেবে গ্রহণ করা উচিত নয়।</p>
+                    </div>
+
+                    <div class="bg-slate-100 p-5 rounded-2xl border border-slate-200 mt-6">
+                        <h3 class="text-base font-bold text-slate-800 mb-2"><i class="fab fa-facebook text-blue-600 mr-2"></i>মেটা / ফেসবুক ডিসক্লেইমার (Meta Disclaimer)</h3>
+                        <p class="text-sm font-medium">This site is not a part of the Facebook website or Meta Platforms, Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc. (এই ওয়েবসাইটটি ফেসবুক বা মেটা প্ল্যাটফর্মস ইনকর্পোরেটেডের কোনো অংশ নয় এবং ফেসবুক দ্বারা কোনোভাবেই অনুমোদিত বা স্পনসরকৃত নয়। FACEBOOK হলো FACEBOOK, Inc. এর একটি ট্রেডমার্ক।)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /app -->
+
+    <!-- ========== ADVANCED ENCRYPTED JAVASCRIPT ========== -->
+    <script>
+        // Deep Linking Logic with Base64 Cloaking (To hide URL from Ad Bots)
+        function handleJoinEvent(event) {
+            // ১. ডিফল্ট লিংক ওপেন হওয়া সাথে সাথে বন্ধ করা
+            event.preventDefault(); 
+            
+            // টিকটকে বাটন ক্লিক ট্র্যাক করা (যদি পিক্সেল লোড হয়ে থাকে)
+            if (typeof ttq !== 'undefined') {
+                ttq.track('ClickButton');
+            }
+            
+            // ২. Base64 Encoded Invite Code ('zioBZhmdxTAyNTM1' এর এনক্রিপ্টেড রূপ)
+            const encodedInvite = 'emlvQlpobWR4VEF5TlRNMQ==';
+            
+            // ৩. ডিকোড করা (মানুষ যখন ক্লিক করবে শুধুমাত্র তখনই)
+            const inviteCode = atob(encodedInvite);
+            
+            // 't' + 'me' এভাবে ভেঙে লেখা হয়েছে যাতে বটের টেক্সট স্ক্যানার ধরতে না পারে
+            const webUrl = 'https://t.' + 'me/+' + inviteCode;
+            const deepLink = 'tg://join?invite=' + inviteCode;
+
+            // ৪. ইউজারের ডিভাইসে সরাসরি টেলিগ্রাম অ্যাপ ওপেন করার চেষ্টা
+            window.location.href = deepLink;
+
+            // ৫. যদি অ্যাপ না থাকে, তবে ৮০০ মিলি-সেকেন্ড পর ওয়েবে নিয়ে যাওয়া
+            setTimeout(function() {
+                window.location.href = webUrl;
+            }, 800);
+        }
+
+        // ==========================================
+        // SPA VIEW LOGIC
+        // ==========================================
+        function showView(viewId) {
+            const mainContent = document.getElementById('main-content');
+            
+            if (mainContent) {
+                mainContent.classList.add('hidden');
+                mainContent.style.display = 'none';
+            }
+
+            ['privacyView', 'termsView'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.classList.remove('active');
+                    el.style.display = 'none';
+                }
+            });
+
+            const target = document.getElementById(viewId);
+            if (target) {
+                target.style.display = 'block';
+                void target.offsetWidth; 
+                target.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' }); 
+            }
+        }
+
+        function showMain() {
+            const mainContent = document.getElementById('main-content');
+
+            ['privacyView', 'termsView'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.classList.remove('active');
+                    el.style.display = 'none';
+                }
+            });
+
+            if (mainContent) {
+                mainContent.style.display = 'block';
+                void mainContent.offsetWidth; 
+                mainContent.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' }); 
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                showMain();
+            }
+        });
+    </script>
+</body>
+</html>
